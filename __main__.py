@@ -26,9 +26,9 @@ class ASCIICodeGenerator():
         Generates the contents of ascii table
         '''
         s = ""
-        for i in range(self.initial_num, self._true_div):
+        for i in range(self.initial_num, self._true_div + 1):
             for j in range(i, i + (self._true_div * self.column), self._true_div):
-                s += "| " + str(j) + " |" +  chr(j)
+                s += "| " + str(j) + " | `" +  chr(j) + "` "
             s += " |\n"
 
         if self.final_num % self._true_div:
